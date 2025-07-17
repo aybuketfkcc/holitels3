@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Holitels - Ana Sayfa </title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="padding-top: 0px;">
+  <nav class="navbar navbar-expand-lg glass-navbar fixed-top  shadow-lg " style="padding:20px;"  id="navbar">
+  <a  class="navbar-brand fw-bold text-white" href="index.html" style="font-size: 40px;" > Holitels </a>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
+    <ul class="navbar-nav align-items-center">
+    <li class="nav-item"><a class="nav-link" href="hotel-list.html">Oteller</a></li>
+    <li class="nav-item"><a class="nav-link" href="reservations.html">Rezervasyonlarım</a></li>
+   
+      <li class="nav-item"><a class="nav-link" href="login.html" id="login-link">Giriş Yap</a></li>
+        <li class="nav-item"><span class=hidden id="user-info"></span></li>
+    </ul>
+    
+    
+   
+   
+    <button  id="theme-toggle">🌙 / ☀️</button>
+
+  </div>
+
+
+   </nav>
+   
+<header class="bg-light py-5" id="header">
+    <div class="container text-center"  style="padding-top: 100px;">
+      <h1 class="display-5 fw-bold">Holitels'e Hoş Geldiniz</h1>
+      <p class="lead">En uygun otelleri kolayca arayın, filtreleyin ve rezervasyon yapın.</p>
+    </div>
+  </header>
+
+
+   <section id="filter-section" class="container my-5" style="padding: 15px;" >
+  <h2 class="mb-6 text-primary">Detaylı Otel Arama</h2>
+  <form id="searchForm" class="row g-3 ">
+    <div class="col-md-3  "  style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <label>Şehir:</label>
+    <br>
+    <input type="text" id="city" name="city" placeholder="İstanbul" style="border-radius: 10px;">
+    </div>
+
+    <div class="col-md-3 " style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >
+    <label>İlçe:</label>
+    <br>
+    <input type="text" id="district" name="district" placeholder="Kadıköy" style="border-radius: 10px;">
+    </div>
+
+    <div class="col-md-3 " style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <label>Min Fiyat:</label>
+    <input type="number" id="minPrice" name="minPrice" placeholder="100" style="border-radius: 10px;">
+    </div>
+
+    <div class="col-md-3  "  style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <label>Maks Fiyat:</label>
+    <input type="number" id="maxPrice" name="maxPrice" placeholder="1000" style="border-radius: 10px;">
+    </div>
+
+    <div class="col-md-3 form-check" >
+    <label><input type="checkbox" id="petsAllowed" name="petsAllowed" > Evcil hayvan dostu</label>
+    <label><input type="checkbox" id="breakfastIncluded" name="breakfastIncluded"> Kahvaltı dahil </label>
+    </div>
+
+     <div class="col-mt-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <button type="submit" class="btn btn-primary btn-sm " style="border-radius: 15px;"  >Ara</button>
+    </div>
+  </form>
+</section>
+
+    
+    
+    
+
+
+ 
+ 
+
+     <footer class="text-center text-muted py-3 border-top">
+<small>© 2025 Holitels. Tüm hakları saklıdır.</small>
+</footer>
+
+
+  <script src="js/main.js"></script>
+   <script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+   
+</body>
+</html>
