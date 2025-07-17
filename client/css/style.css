@@ -1,0 +1,610 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  margin: 20px;
+}
+
+.hotel-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hotel-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  width: 300px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hotel-card h2 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.reservation-form {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.reservation-form h3 {
+  margin-bottom: 1rem;
+}
+
+.reservation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reservation-form input, .reservation-form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  
+}
+.message-area {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
+
+.message-area.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-area.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+/* Rezervasyon Kartları */
+.reservation-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reservation-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-card h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+/* Sil Butonu */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Başlık */
+h2, h3 {
+  font-family: Arial, sans-serif;
+}
+
+/* Rezervasyon mesaj alanı */
+.message-area {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
+
+.message-area.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-area.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Kullanıcı üst bilgi */
+#user-info {
+  float: right;
+  margin-top: 0px;
+  margin-right: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Otel sayfası ile aynı hizaya getirmek istersen */
+#reservation-list {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#theme-toggle{
+  border: 2px solid transparent;
+  border-color: #ccc;
+  color: #ffffff;
+  border-radius: 10px;
+}
+/*dark-light mod için*/
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #202020;
+}
+
+body.dark {
+  --bg-color: #181818;
+  --text-color: #f1f1f1;
+  
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.7s, color 0.7s;
+}
+
+
+#header{
+  
+  height:550px;
+  background-image:url(/client/fotoğraflar/pexels-pixabay-38238.jpg);
+   background-repeat: no-repeat;
+  
+      background-size:2300px;
+   background-position: center;
+
+   color: rgba(31, 35, 35, 0.6); ;
+}
+
+
+
+
+
+#navbar
+{
+   backdrop-filter: blur(10px);
+  background-color: rgba(123, 159, 216, 0.271);
+}
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+#filter-section{
+  background-color:  #51beed1a;
+   border: 5px solid #82a4c732;
+
+  border-radius: 10px; /* Tüm köşeleri yuvarlar */
+  
+
+  
+}
+/* otel detay*/
+.image-gallery {
+  margin: 20px 0;
+  text-align: center;
+ 
+}
+
+.main-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.main-image-wrapper img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 2;
+}
+
+.left-arrow { left: -40px; 
+border-radius: 20px;}
+.right-arrow { right: -40px; 
+border-radius: 20px;}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  border-color: #007bff;
+}
+.reservation-form{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 200px;
+  background-color: #95b2d27d;
+ 
+ 
+}
+
+.reservation-card{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+/* Ana görsel için */
+#main-image {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Thumbnail küçük görseller */
+.thumbnail {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  margin: 5px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: #007bff;
+}
+
+/* Thumbnail container için yatay sıralama */
+#thumbnail-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/* Ok ikonları için */
+.left-arrow,
+.right-arrow {
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  color: #007bff;
+}
+/*                                 */
+
+
+
+/* Kapsayıcı div – okları ve ana görseli hizalayacak */
+.image-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Ana görsel */
+#main-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Oklar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left-arrow {
+   position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ font-size: 25px;
+ color: #007bff;
+ cursor: pointer;
+ user-select: none;
+ padding: 5px;
+ background-color: rgba(255, 255, 255, 0.7);
+ border-radius: 50%;
+ z-index: 2;
+  left: 10px;
+}
+
+.right-arrow {
+   position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ font-size: 25px;
+ color: #007bff;
+ cursor: pointer;
+ user-select: none;
+ padding: 5px;
+ background-color: rgba(255, 255, 255, 0.7);
+ border-radius: 50%;
+ z-index: 2;
+  right: 10px;
+}
+
+/* Thumbnail container */
+#thumbnail-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/* Thumbnail görseller */
+.thumbnail {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: #007bff;
+}
+#hotel-detail{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+
+
+/* sayfayı ortalamak için */
+.loginbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+ 
+  font-family: Arial, sans-serif;
+}
+
+/* form kutusu */
+.auth-form {
+  background: rgba(178, 192, 218, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: center;
+}
+
+/* başlık */
+.auth-form h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* input ve button'lar */
+.auth-form input,
+.auth-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  
+}
+
+.auth-form button {
+  background-color: #647c96;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #2d4b6c;
+}
+
+/* alt kısımdaki link ve mesaj */
+.auth-form a {
+  display: block;
+  margin-top: 10px;
+  color: #628fbf;
+  text-decoration: none;
+}
+
+.auth-form a:hover {
+  text-decoration:underline;
+}
+
+#login-status {
+  margin-top: 10px;
+  color: rgb(0, 157, 255);
+  font-size: 14px;
+}
+
+
+
+.regbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+ 
+  font-family: Arial, sans-serif;
+}
+
+#registerForm {
+  background: rgba(178, 192, 218, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: center;
+}
+
+#registerForm h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  color: #333;
+  
+}
+
+#registerForm input,
+#registerForm button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  
+}
+
+#registerForm button {
+  background-color: #647c96;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#registerForm button:hover {
+  background-color:#2d4b6c;
+}
+
+#registerForm a {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+#registerForm a:hover {
+  text-decoration: underline;
+}
+
+#register-status {
+  margin-top: 10px;
+  color: rgba(196, 20, 20, 0.606);
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+#reservation-list{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ -webkit-text-fill-color:rgba(13, 13, 13, 0.776)
+ 
+}
+
+#hotel-list{
+  color: #181818;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+ height: 60vh;
+ 
+ 
+ 
+  
+}
+
+.hotel-card{
+  background-color: #a0bbd7b1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+#reservation-list{
+background-color: #718aa8;
+border-radius: 30px;
+text-align: center;
+}
+
+
+
