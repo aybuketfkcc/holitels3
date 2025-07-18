@@ -30,11 +30,13 @@ app.get('/', (req, res) => {
 });
 
 //DENEME//
+
+/*
 app.get('/api/test', (req, res) => {
   res.send('API çalışıyor!');
 });
 
-
+*/
 app.get("/api/test-db", async (req, res) => {
   try {
     const [rows] = await db.query("SELECT NOW()");
