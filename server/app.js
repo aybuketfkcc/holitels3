@@ -13,7 +13,7 @@ const detailSearchRoutes = require('./routes/detailSearchRoutes');
 const hotelImagesRoutes = require('./routes/hotelImagesRoutes');
 
 const app = express();
-
+const db = require("./db/db");
 dotenv.config();
 app.use(cors());
 app.use(express.json()); // JSON verileri düzgün alabilmek için
@@ -35,8 +35,32 @@ app.get('/api/test', (req, res) => {
 });
 
 
+app.get("/api/test-db", async (req, res) => {
+  try {
+    const [rows] = await db.query("SELECT NOW()");
+    res.json({ success: true, results: rows });
+  } catch (err) {
+    console.error("Veritabanı hatası:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+
+
+
+
 // Sunucuyu başlat
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Sunucu ${PORT} portunda çalışıyor...`);
 });
+
+
+
+
+
+
+
+
+
+
